@@ -1,0 +1,38 @@
+python3 main_pretrain.py \
+    --dataset cifar10 \
+    --backbone resnet18 \
+    --data_dir ./dataset \
+    --max_epochs 200 \
+    --gpus 0 \
+    --accelerator gpu \
+    --precision 16 \
+    --optimizer adamw \
+    --exclude_bias_n_norm \
+    --eta_lars 0.02 \
+    --scheduler warmup_cosine \
+    --lr 4e-4 \
+    --classifier_lr 4e-4 \
+    --weight_decay 1e-5 \
+    --batch_size 256 \
+    --num_workers 20 \
+    --brightness 0.4 \
+    --contrast 0.4 \
+    --saturation 0.4 \
+    --hue 0.1 \
+    --gaussian_prob 0.0 0.0 \
+    --crop_size 32 \
+    --num_crops_per_aug 1 1 \
+    --name dino-cifar10 \
+    --entity unitn-mhug \
+    --project solo-learn \
+    --save_checkpoint \
+    --method dino \
+    --proj_output_dim 256 \
+    --proj_hidden_dim 2048 \
+    --num_prototypes 4096 \
+    --base_tau_momentum 0.9995 \
+    --final_tau_momentum 1.0 \
+    --momentum_classifier \
+    --csv \
+    --checkpoint_frequency=20 \
+    --corrupt ${1:-ori} \

@@ -1,0 +1,25 @@
+#!/bin/bash
+#PBS -l nodes=nano3:ppn=12:gpus=1,walltime=96:00:00
+#PBS -N ssl-dino600
+#PBS -e stderr2.txt
+#PBS -o stdout2.txt
+
+cd $PBS_O_WORKDIR
+#export CUDA_VISIBLE_DEVICES=1
+source activate pt18
+pwd
+which python
+nvidia-smi
+echo CUDA_VISIBLE_DEVICES=$CUDA_VISIBLE_DEVICES
+
+for c in ori glo_4 loc_4 gam_0.2 glo_8 loc_8; do
+    ./dino600.sh cifar10 $c
+    ./knn.sh trained_models/dino600-cifar10/$c $c > trained_models/dino600-cifar10/$c/knn_$c.txt
+    ./knn.sh trained_models/dino600-cifar10/$c > trained_models/dino600-cifar10/$c/knn_ori.txt
+done
+
+# for c in ori glo_4 loc_4 gam_0.2 glo_8 loc_8 gam_0.1; do
+#     ./dino.sh cifar100 $c
+#     ./knn.sh trained_models/dino-cifar100/$c $c > trained_models/dino-cifar100/$c/knn_$c.txt
+#     ./knn.sh trained_models/dino-cifar100/$c > trained_models/dino-cifar100/$c/knn_ori.txt
+# done

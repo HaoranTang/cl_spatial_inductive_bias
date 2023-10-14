@@ -118,7 +118,7 @@
 
 <html>
 <head>
-	<title>This is my paper title</title>
+	<title>Contrastive Learning Relies More on Spatial Inductive Bias Than Supervised Learning: An Empirical Study</title>
 	<meta property="og:image" content="Path to my teaser.png"/> <!-- Facebook automatically scrapes this. Go to https://developers.facebook.com/tools/debug/ if you update and want to force Facebook to rescrape. -->
 	<meta property="og:title" content="Creative and Descriptive Paper Title." />
 	<meta property="og:description" content="Paper description." />
@@ -144,17 +144,22 @@
 				<tr>
 					<td align=center width=100px>
 						<center>
-							<span style="font-size:24px"><a href="https://en.wikipedia.org/wiki/James_J._Gibson">First Author</a></span>
+							<span style="font-size:24px"><a>Yuanyi Zhong</a></span>
 						</center>
 					</td>
 					<td align=center width=100px>
 						<center>
-							<span style="font-size:24px"><a href="https://en.wikipedia.org/wiki/James_J._Gibson">Second Author</a></span>
+							<span style="font-size:24px"><a>Haoran Tang</a></span>
 						</center>
 					</td>
 					<td align=center width=100px>
 						<center>
-							<span style="font-size:24px"><a href="https://en.wikipedia.org/wiki/James_J._Gibson">Third Author</a></span>
+							<span style="font-size:24px"><a>Junkun Chen</a></span>
+						</center>
+					</td>
+					<td align=center width=100px>
+						<center>
+							<span style="font-size:24px"><a>Yuxiong Wang</a></span>
 						</center>
 					</td>
 				</tr>
@@ -163,12 +168,12 @@
 				<tr>
 					<td align=center width=120px>
 						<center>
-							<span style="font-size:24px"><a href=''>[Paper]</a></span>
+							<span style="font-size:24px"><a href='https://openaccess.thecvf.com/content/ICCV2023/html/Zhong_Contrastive_Learning_Relies_More_on_Spatial_Inductive_Bias_Than_Supervised_ICCV_2023_paper.html'>[Paper]</a></span>
 						</center>
 					</td>
 					<td align=center width=120px>
 						<center>
-							<span style="font-size:24px"><a href='https://github.com/richzhang/webpage-template'>[GitHub]</a></span><br>
+							<span style="font-size:24px"><a href='https://github.com/HaoranTang/cl_spatial_inductive_bias'>[GitHub]</a></span><br>
 						</center>
 					</td>
 				</tr>
@@ -201,7 +206,11 @@
 		<center><h1>Abstract</h1></center>
 		<tr>
 			<td>
-				This is my abstract.
+				Though self-supervised contrastive learning (CL) has shown its potential to achieve state-of-the-art accuracy without any supervision, its behavior still remains under investigated by academia. Different from most previous work that understands CL from learning objectives,
+				we focus on an unexplored yet natural aspect: the spatial inductive bias which seems to be implicitly exploited via data augmentations in CL. We design an experiment to study the reliance of CL on such spatial inductive bias,
+				by destroying the global or local spatial structures of image with global or local patch shuffling, and comparing the performance drop between experiments on original and corrupted dataset to quantify the reliance of certain inductive bias.
+				We also use the uniformity of feature space to further research on how CL-pre-trained model behave with the corrupted dataset. Our results and analysis show that CL has a much higher reliance on spatial inductive bias than SL,
+				regardless of specific CL algorithm or backbones, opening a new direction for studying the behavior of CL.
 			</td>
 		</tr>
 	</table>

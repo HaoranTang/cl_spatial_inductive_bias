@@ -119,6 +119,22 @@
 	    vertical-align: super;
 	    font-size: medium;
         }
+
+	.column2 {
+	  float: left;
+	  width: 50%;
+	  padding: 5px;
+	}
+	.column {
+	  float: left;
+	  width: 25%;
+	  padding: 5px;
+	}
+	.row::after {
+	  content: "";
+	  clear: both;
+	  display: table;
+	}
 </style>
 
 <html>
@@ -290,6 +306,19 @@
 				</td>
 			</tr>
 		</center>
+	</table>
+	<table align=center width=800px>
+		<div class="row">
+		  <div class="column2">
+		    <img src="Tab_1-1.png" alt="tab1" style="width:100%">
+		  </div>
+		  <div class="column">
+		    <img src="Tab_5_res-1.png" alt="tab5res" style="width:100%">
+		  </div>
+		  <div class="column">
+		    <img src="Tab_5_vit-1.png" alt="tab5vit" style="width:100%">
+		  </div>
+		</div>
 	</table>
 	<table align=center width=800px>
 		<br>

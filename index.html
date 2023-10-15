@@ -318,10 +318,8 @@
 			<td>
 					Pretraining and Downstream tasks with corruptions lead to consistent observations, which hold for different datasets, architectures, etc.
 					<ul>
-					  <li>CL relies more on spatial inductive bias than SL.</li>
-					  <li>CL relies more on global spatial inductive bias than local.</li>
-					  <li>Reasonable design on corruption-augmentation order and permutation generation.</li>
-					  <li>Well pretrained CLs with spatial bias are more robust to patch shuffling than SL on Downstream.</li>
+					  <li>CL relies more on spatial inductive bias than SL; CL relies more on global spatial inductive bias than local</li>
+					  <li>Well pretrained CLs with spatial bias are more robust to patch shuffling than SL on Downstream tasks</li>
 					</ul>
 					
 			</td>
@@ -341,20 +339,21 @@
 		<tr>
 			<td align=center width=800px>
 				<center>
-					<td><img class="round" style="width:800px" src="./resources/vis_attn_mod-1"/></td>
-				</center>
-			</td>
-		</tr>
-	</table>
-	<table align=center width=800px>
-		<center><h1>Empirical Analysis from Feature Space</h1></center>
-		<tr>
-			<td align=center width=800px>
-				<center>
 					<td><img class="round" style="width:800px" src="./resources/vis_attn_mod-1.png"/></td>
 				</center>
 			</td>
 		</tr>
+		<center>Grad-CAM maps from learn representations</center>
+	</table>
+	<table align=center width=800px>
+		<tr>
+			<td align=center width=800px>
+				<center>
+					<td><img class="round" style="width:800px" src="./resources/unif-1.png"/></td>
+				</center>
+			</td>
+		</tr>
+		<center>Class-wise feature uniformity throughout training (black represents overal feature space)</center>
 	</table>
 
 	<div class="row">
@@ -371,6 +370,7 @@
 	    		<img src="./resources/unif_loc_8-1.png" alt="loc" style="width:100%">
 	  	</div>
 	</div>
+	<center>t-SNE visualizations</center>
 	
 	<table align=center width=600px>
 		<tr>

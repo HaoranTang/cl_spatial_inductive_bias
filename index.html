@@ -320,10 +320,12 @@
 		<tr>
 			<td><a href=""><img class="round" style="width:459px" src="./resources/exp.png"/></a></td>
 			<td>
-					We corrupt the spatial inductie bias from data by destroying its structural information in two ways:
+					Pretraining and Downstream tasks with corruptions lead to consistent observations, which hold for different dataset, architecture, etc.
 					<ul>
-					  <li>Global shuffling: Divide image into N&times;N patches of patch size P, shuffle all patches</li>
-					  <li>Local shuffling: Divide image into N&times;N patches of patch size P, shuffle pixels within each patch independently</li>
+					  <li>CL relies more on spatial inductive bias than SL.</li>
+					  <li>CL relies more on global spatial inductive bias than local.</li>
+					  <li>Reasonable design on corruption-augmentation order and permutation generation.</li>
+					  <li>Well pretrained CLs with spatial bias are more robust to patch shuffling than SL on Downstream.</li>
 					</ul>
 					
 			</td>

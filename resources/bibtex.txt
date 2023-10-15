@@ -1,6 +1,8 @@
-@inproceedings{author20XXtitle,
-  title={Please cite me},
-  author={Author, First and Author, Second and Author, Third},
-  booktitle={Conference},
-  year={20XX}
+@InProceedings{Zhong_2023_ICCV,
+    author    = {Zhong, Yuanyi and Tang, Haoran and Chen, Jun-Kun and Wang, Yu-Xiong},
+    title     = {Contrastive Learning Relies More on Spatial Inductive Bias Than Supervised Learning: An Empirical Study},
+    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+    month     = {October},
+    year      = {2023},
+    pages     = {16327-16336}
 }
